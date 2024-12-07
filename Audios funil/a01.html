@@ -12,18 +12,26 @@
       height: 100vh;
       overflow: hidden;
       margin: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
     }    
 
     .audio-container {
       display: flex;
       align-items: center;
+      justify-content: flex-end; /* Alinha a imagem no lado direito */
       font-family: 'Open Sans', sans-serif;
       cursor: pointer; 
       padding: 10px;
+      background-color: #e6f7d9;
+      border-radius: 10px;
+      max-width: 300px;
     }
 
     .audio-container img {
-      margin-right: 10px; /* Espaço entre a imagem e o restante do conteúdo */
+      margin-left: 10px; /* Espaço entre a imagem e o restante do conteúdo */
       width: 50px;
       height: 50px;
       border-radius: 50%;
@@ -33,34 +41,37 @@
     .audio-content {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
+      flex-grow: 1;
     }
 
-    .audio-container .microphone-icon {
-      margin-left: 10px; /* Espaço entre o player e o ícone do microfone */
+    .microphone-icon {
+      margin-left: 5px; /* Espaço entre o player e o ícone do microfone */
       font-size: 22px;
-      color: #4ad954;
-    }
-
-    .audio-container .microphone-icon.blue {
-      color: #3db8ee;
+      color: #4ad954; /* Verde original */
     }
 
     .plyr--audio .plyr__control.plyr__tab-focus,
     .plyr--audio .plyr__control:hover,
     .plyr--audio .plyr__control[aria-expanded=false] {
-      background: rgba(0, 0, 0, 0);
-      color: var(--plyr-audio-control-color-hover, #797979);
+      background: transparent;
+      color: #797979;
     }
 
     .plyr--audio .plyr__controls {
-      background: rgba(0, 0, 0, 0);
+      background: transparent;
       color: #4a5464;
-      margin-left: 0px;
-      padding: 0px;
+      margin: 0;
+      padding: 0;
     }
 
-    .plyr--audio .plyr__control--overlaid .plyr__control__icon {
-      font-size: 33px;
+    .plyr--full-ui input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      background: #4ad954; /* Verde original do WhatsApp */
+      border-radius: 50%;
+      border: none;
     }
 
     .hide {
@@ -70,15 +81,15 @@
 </head>
 <body>
   <div class="audio-container" id="audioContainer">
-    <!-- Cole o link da Sua imagem Abaixo-->
-    <img src="https://i.postimg.cc/4NX94BQZ/Foto-perfil.png" alt="Imagem">
     <div class="audio-content">
-      <!-- Cole o link do Seu áudio Abaixo-->
+      <!-- Cole o link do Seu áudio Abaixo -->
       <audio class="plyr" src="https://storage.chatecom.io/typebot/public/workspaces/isaacavilasilva1998@gmail.com/typebots/cm44cky5l00028a7v3jtaodxu/blocks/2699475f0c2b4909bf915b464e0a58e5?v=1732985832058"></audio>
       <div class="microphone-icon">
         <i class="fas fa-microphone"></i>
       </div>
     </div>
+    <!-- Cole o link da Sua imagem Abaixo -->
+    <img src="https://i.postimg.cc/4NX94BQZ/Foto-perfil.png" alt="Imagem">
   </div>
   
   <script src="https://cdn.plyr.io/3.6.7/plyr.js"></script>
