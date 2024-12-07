@@ -11,34 +11,35 @@
     body {
       height: 100vh;
       overflow: hidden;
-      margin: 0px;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f0f0f0;
+      background-color: #f0f0f0; /* Opcional para visualização */
     }    
 
     .audio-container {
       display: flex;
       align-items: center;
-      justify-content: flex-end; /* Alinha a imagem no lado direito */
+      justify-content: flex-end; /* Alinha imagem à direita */
       font-family: 'Open Sans', sans-serif;
-      cursor: pointer; 
-      padding: 10px;
+      cursor: pointer;
+      padding: 5px;
       border-radius: 10px;
-      max-width: 300px;
-      box-sizing: border-box; /* Evita cortes nos elementos */
+      max-width: 280px; /* Ajustado para acomodar elementos */
+      box-sizing: border-box;
+      background: none; /* Sem cor de fundo */
     }
 
     .audio-container img {
-      width: 50px; /* Tamanho fixo */
-      height: 50px; /* Tamanho fixo */
+      width: 40px; /* Reduzido */
+      height: 40px; /* Reduzido */
       border-radius: 50%; /* Torna a imagem circular */
-      object-fit: cover; /* Mantém a proporção da imagem */
-      margin-left: 10px; /* Espaçamento entre a imagem e o restante do conteúdo */
+      object-fit: cover;
+      margin-left: 8px; /* Espaçamento da imagem */
       max-width: 100%;
       max-height: 100%;
-      box-sizing: border-box; /* Evita cortes */
+      box-sizing: border-box;
     }
 
     .audio-content {
@@ -49,20 +50,18 @@
     }
 
     .microphone-icon {
-      margin-left: 5px; /* Espaço entre o player e o ícone do microfone */
-      font-size: 22px;
+      margin-left: 5px;
+      font-size: 18px; /* Reduzido */
       color: #4ad954; /* Verde original */
     }
 
-    .plyr--audio .plyr__control.plyr__tab-focus,
-    .plyr--audio .plyr__control:hover,
-    .plyr--audio .plyr__control[aria-expanded=false] {
-      background: transparent;
-      color: #797979;
+    .plyr--audio .plyr__control {
+      background: none; /* Sem cor de fundo */
+      color: #4a5464;
     }
 
     .plyr--audio .plyr__controls {
-      background: transparent;
+      background: none; /* Sem cor de fundo */
       color: #4a5464;
       margin: 0;
       padding: 0;
